@@ -1,0 +1,24 @@
+gesdinet_jwt_refresh_token:
+    refresh_token_class: Gesdinet\JWTRefreshTokenBundle\Entity\RefreshToken
+    ttl: 604800 # 7 dias
+    ttl_update: true
+    firewall: api
+    user_provider: app_user_provider
+    user_identity_field: email
+    manager_type: doctrine
+    object_manager: null
+    refresh_token_entity: Gesdinet\JWTRefreshTokenBundle\Entity\RefreshToken
+    refresh_token_parameter_name: refresh_token
+    single_use: false
+    token_parameter_name: token
+    check_cookie: false
+    cookie: []
+    remove_token_from_body_when_cookie_used: false
+    set_cookies:
+        REFRESH_TOKEN:
+            lifetime: 604800
+            path: /
+            domain: null
+            secure: true
+            httpOnly: true
+            sameSite: lax 

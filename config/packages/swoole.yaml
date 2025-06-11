@@ -1,0 +1,26 @@
+swoole:
+    http_server:
+        port: 9501
+        host: 0.0.0.0
+        settings:
+            worker_num: 4
+            daemonize: false
+            log_level: 0
+            log_file: '%kernel.project_dir%/var/log/swoole.log'
+            pid_file: '%kernel.project_dir%/var/cache/swoole.pid'
+            max_request: 10000
+            max_conn: 1024
+            buffer_output_size: 2 * 1024 * 1024
+            package_max_length: 10 * 1024 * 1024
+            enable_reuse_port: true
+            enable_coroutine: true
+            max_coroutine: 3000
+            hook_flags: 1879048191
+            task_worker_num: 4
+            task_enable_coroutine: true
+            task_max_request: 10000
+            task_tmpdir: '%kernel.project_dir%/var/cache/swoole/task'
+            max_wait_time: 60
+            max_coro_num: 3000
+            max_request_grace: 0
+            enable_preemptive_scheduler: true 
